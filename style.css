@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.game-container {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+}
+
+.game-info {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    min-width: 200px;
+}
+
+.next-piece-container, .hold-piece-container {
+    margin-bottom: 20px;
+}
+
+.next-piece-container h3, .hold-piece-container h3, 
+.game-stats h3, .controls-info h3 {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+#next-piece, #hold-piece {
+    width: 100px;
+    height: 100px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.game-stats {
+    margin-bottom: 20px;
+}
+
+.score-container, .level-container, .lines-container {
+    margin-bottom: 10px;
+}
+
+#score, #level, #lines {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.controls-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.game-board-container {
+    position: relative;
+}
+
+#game-board {
+    width: 300px;
+    height: 600px;
+    border: 2px solid #333;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    background-color: #f9f9f9;
+}
+
+.cell {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.piece-I {
+    background-color: #00f0f0;
+}
+
+.piece-J {
+    background-color: #0000f0;
+}
+
+.piece-L {
+    background-color: #f0a000;
+}
+
+.piece-O {
+    background-color: #f0f000;
+}
+
+.piece-S {
+    background-color: #00f000;
+}
+
+.piece-T {
+    background-color: #a000f0;
+}
+
+.piece-Z {
+    background-color: #f00000;
+}
+
+.ghost {
+    background-color: rgba(170, 170, 170, 0.3) !important;
+    border: 1px solid rgba(170, 170, 170, 0.5) !important;
+}
+
+#game-over, #pause-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.game-over-content, .pause-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.game-over-content h2, .pause-content h2 {
+    margin-bottom: 20px;
+}
+
+#final-score {
+    font-weight: bold;
+}
+
+#restart-button, #resume-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#restart-button:hover, #resume-button:hover {
+    background-color: #45a049;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .game-container {
+        flex-direction: column;
+    }
+    
+    .game-info {
+        margin-right: 0;
+        margin-bottom: 20px;
+        min-width: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .next-piece-container, .hold-piece-container, 
+    .game-stats, .controls-info {
+        margin-bottom: 15px;
+        flex: 1 0 40%;
+    }
+}
