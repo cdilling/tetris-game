@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-info">
+            <div class="next-piece-container">
+                <h3>Next</h3>
+                <div id="next-piece"></div>
+            </div>
+            <div class="hold-piece-container">
+                <h3>Hold</h3>
+                <div id="hold-piece"></div>
+            </div>
+            <div class="game-stats">
+                <div class="score-container">
+                    <h3>Score</h3>
+                    <div id="score">0</div>
+                </div>
+                <div class="level-container">
+                    <h3>Level</h3>
+                    <div id="level">1</div>
+                </div>
+                <div class="lines-container">
+                    <h3>Lines</h3>
+                    <div id="lines">0</div>
+                </div>
+            </div>
+            <div class="controls-info">
+                <h3>Controls</h3>
+                <p>← → : Move</p>
+                <p>↑ : Rotate</p>
+                <p>↓ : Soft Drop</p>
+                <p>Space : Hard Drop</p>
+                <p>C : Hold Piece</p>
+                <p>P : Pause</p>
+            </div>
+        </div>
+        <div class="game-board-container">
+            <div id="game-board"></div>
+        </div>
+    </div>
+    <div id="game-over" class="hidden">
+        <div class="game-over-content">
+            <h2>Game Over</h2>
+            <p>Your score: <span id="final-score">0</span></p>
+            <button id="restart-button">Play Again</button>
+        </div>
+    </div>
+    <div id="pause-menu" class="hidden">
+        <div class="pause-content">
+            <h2>Game Paused</h2>
+            <button id="resume-button">Resume</button>
+        </div>
+    </div>
+    <script src="tetris.js"></script>
+</body>
+</html>
